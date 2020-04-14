@@ -32,8 +32,7 @@ function getQuote() {
 
   $("#text").text(currentQuote);
   $("#author").text(currentAuthor);
-  $('#tweet-quote').attr('href', 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + currentQuote + '" ' + currentAuthor));
-
+  $("#tweet-quote").attr("href",'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + currentQuote + '" ' + currentAuthor));
 }
 
 $(document).ready(function() {
@@ -42,12 +41,8 @@ $(document).ready(function() {
   });
 
   $('#new-quote').on('click', getQuote);
-  $('#share').on('click', function(){
-    window.open(url);
+  $('#tweet-quote').on('click', function(){
+    window.open();
   });
 
 });
-
-
-
-  //$('.twitter-share-button').on('click', openURL('https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=test' + encodeURIComponent('"' + currentQuote + '" ' + currentAuthor)));
