@@ -23,23 +23,3 @@ body {
 .min-100 {
     min-height: 100%;
 }
-
-.bg1 {
-  background-color: lightgrey;
-}
-
-.bg2 {
-  background-color: lightblue;
-}
-
-.bg3 {
-  background-color: lightgrey;
-}
-
-.bg4 {
-  background-color: orange;
-}
-
-.bg5 {
-  background-color: yellow;
-}
