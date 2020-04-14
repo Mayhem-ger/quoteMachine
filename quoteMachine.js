@@ -3,10 +3,6 @@ let quotesData;
 var currentQuote = '', currentAuthor = '';
 var url ="https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=testststst"
 
-function openURL(url){
-  window.open(url);
-}
-
 function getQuotes() {
   return $.ajax({
     headers: {
@@ -45,10 +41,13 @@ $(document).ready(function() {
     getQuote();
   });
 
-  $('#new-quote').on('click', getQuote)
+  $('#new-quote').on('click', getQuote);
+  $('#share').on('click', function(){
+    window.open(url);
+  });
 
 });
 
-  $("#share").click(openURL(url));
+
 
   //$('.twitter-share-button').on('click', openURL('https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=test' + encodeURIComponent('"' + currentQuote + '" ' + currentAuthor)));
